@@ -14,11 +14,24 @@
       line-height: 1.6;
     }
     header {
-      background: #08324f;
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
+  background: #0b3c5d;
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+    header.shrink {
+  padding: 20px 20px;
+}
+header.shrink h1 {
+  font-size: 28px;
+}
+header.shrink img {
+  width: 70px;
+}
     header h1 {
       font-size: 42px;
       margin-bottom: 10px;
