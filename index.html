@@ -16,14 +16,17 @@
     header {
   background: #0b3c5d;
   color: white;
-  padding: 70px 20px;
+  padding: 40px 20px;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  transition: all 0.35s ease;
+  transition: transform 0.35s ease;
   z-index: 1000;
+}
+    header.hide {
+  transform: translateY(-100%);
 }
     header.shrink {
   padding: 20px 20px;
@@ -48,7 +51,10 @@ header.shrink img {
   max-width: 1100px;
   margin: auto;
   padding: 60px 20px;
-  margin-top: 140px;
+}
+
+body {
+  padding-top: 120px;
 }
     h2 {
       color: #0b3c5d;
@@ -149,13 +155,21 @@ header.shrink img {
 </footer>
 
   <script>
+  let lastScroll = 0;
+
   window.addEventListener("scroll", function () {
     const header = document.querySelector("header");
-    if (window.scrollY > 80) {
-      header.classList.add("shrink");
+    const currentScroll = window.scrollY;
+
+    if (currentScroll > lastScroll && currentScroll > 100) {
+      // scrolling down
+      header.classList.add("hide");
     } else {
-      header.classList.remove("shrink");
+      // scrolling up
+      header.classList.remove("hide");
     }
+
+    lastScroll = currentScroll;
   });
 </script>
   
