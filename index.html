@@ -18,17 +18,21 @@
   color: white;
   padding: 70px 20px;
   text-align: center;
-  position: sticky;
+  position: fixed;
   top: 0;
-  transition: all 0.3s ease;
+  left: 0;
+  width: 100%;
+  transition: all 0.35s ease;
   z-index: 1000;
 }
     header.shrink {
   padding: 20px 20px;
 }
+
 header.shrink h1 {
   font-size: 28px;
 }
+
 header.shrink img {
   width: 70px;
 }
@@ -41,10 +45,11 @@ header.shrink img {
       opacity: 0.9;
     }
     section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 60px 20px;
-    }
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  margin-top: 140px;
+}
     h2 {
       color: #0b3c5d;
       margin-bottom: 20px;
@@ -139,10 +144,20 @@ header.shrink img {
   <p>Phone / WhatsApp: +216 24750950</p>
   <p>Available 7 days a week</p>
 </section>
-
 <footer>
   © 2026 Yachting Services Tunisia – All Rights Reserved
 </footer>
 
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.querySelector("header");
+    if (window.scrollY > 80) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>
+  
 </body>
 </html>
