@@ -35,15 +35,23 @@
   margin-right: 15px;
 }
 
+.title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .title h1 {
-  font-size: 24px;
+  font-size: 22px;
   margin: 0;
 }
 
 .title p {
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
-  opacity: 0.85;
+  opacity: 0.8;
+  white-space: nowrap;
+}
 }
 header h1 {
   font-size: 18px;
@@ -84,7 +92,7 @@ header.shrink img {
 }
 
 body {
-  padding-top: 95px;
+  padding-top: 120px;
 }
     h2 {
       color: #0b3c5d;
@@ -113,14 +121,16 @@ body {
 <body>
 
 <header>
-  <div class="header-content">
+  <header id="main-header">
+  <div class="header-left">
     <img src="logo ysplus.png" alt="Company Logo" class="logo">
-    <div class="title">
+    
+    <div class="title-group">
   <h1>Yachting Services Plus</h1> 
+      <span class="slogan">Your trusted yacht agent in Tunisia</span>
     </div>
   </div>
 </header>
-  <p>Your trusted yacht agent in Tunisia</p>
 
 
 <section>
